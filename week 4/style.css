@@ -1,0 +1,47 @@
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 100px;
+  animation: flyRocket 6s infinite linear;
+}
+
+@keyframes flyRocket {
+  0% { transform: translateY(100px); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-500px); opacity: 0; }
+}
+
+
+.astronaut {
+  position: absolute;
+  right: 10%;
+  top: 100px;
+  width: 80px;
+  animation: floatAstronaut 4s ease-in-out infinite;
+}
+
+@keyframes floatAstronaut {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+.navbar a {
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff4081;
+}
+
+/* Button Hover */
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
