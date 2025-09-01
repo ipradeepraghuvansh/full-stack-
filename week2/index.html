@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeDown 1.5s ease-in-out;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      animation: popIn 2s ease;
+    }
+    header p {
+      animation: fadeIn 2.5s ease;
+    }
+    .main-content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: slideUp 1s forwards;
+    }
+    .main-content:nth-child(2) { animation-delay: 0.5s; }
+    .main-content:nth-child(3) { animation-delay: 1s; }
+    .main-content:nth-child(4) { animation-delay: 1.5s; }
+
+    h5 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #2575fc;
+    }
+    .mission {
+      font-style: italic;
+      margin: 0.5rem 0 1.5rem 0;
+      color: #555;
+    }
+    .contact-info a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #2575fc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .cta-link:hover {
+      background: #1a5ad9;
+      transform: scale(1.1);
+    }
+    .movies-list, .city-list {
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #f0f4ff;
+    }
+    .movies-list li.favorite {
+      font-weight: bold;
+      color: #6a11cb;
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🌟 My Portfolio</h1>
+    <p>Showcasing my journey, passion & creativity</p>
+  </header>
+
+  <!-- About Us Section -->
+  <div id="about-section" class="main-content" data-role="company-info">
+    <h5>About Me</h5>
+    <p>Hi, I'm <strong>Pradeep</strong> – a fresher student with a positive outlook towards technology. I am highly passionate and almost addictive to coding, and I love working on projects like this portfolio website.</p>
+    <p class="mission">Empowering creativity and technology through my work.</p>
+
+    <div class="contact-info">
+      <h5>📞 Contact Me</h5>
+      <p>Phone: <a href="tel:+7078837915">7078837915</a></p>
+      <p>Email: <a href="mailto:pradeept6122@gmail.com">pradeept6122@gmail.com</a></p>
+    </div>
+
+    <a href="#" class="cta-link">✨ Get in Touch</a>
+  </div>
+
+  <!-- Unordered Movies List -->
+  <div class="main-content">
+    <h5>🎬 Favorite Movies</h5>
+    <ul class="movies-list">
+      <li>Hum Apke Hai Kon</li>
+      <li class="favorite">The Family Man ⭐</li>
+      <li>KGF 2</li>
+      <li>Game of Thrones</li>
+    </ul>
+  </div>
+
+  <!-- Ordered Cities List -->
+  <div class="main-content">
+    <h5>🌍 Dream Cities to Visit</h5>
+    <ol class="city-list">
+      <li>Tokyo</li>
+      <li>Paris</li>
+      <li>Toronto</li>
+      <li>Dubai</li>
+    </ol>
+  </div>
+
+</body>
+</html>
